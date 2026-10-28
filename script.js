@@ -1,0 +1,10 @@
+const themeButton=document.getElementById('themeToggle');
+const menuButton=document.getElementById('menuToggle');
+const nav=document.getElementById('navegacao');
+const savedTheme=localStorage.getItem('portfolio-theme');
+if(savedTheme==='light')document.body.classList.add('light');
+themeButton.addEventListener('click',()=>{document.body.classList.toggle('light');localStorage.setItem('portfolio-theme',document.body.classList.contains('light')?'light':'dark')});
+menuButton.addEventListener('click',()=>{const open=nav.classList.toggle('open');menuButton.setAttribute('aria-expanded',String(open));menuButton.textContent=open?'✕':'☰'});
+nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');menuButton.setAttribute('aria-expanded','false');menuButton.textContent='☰'}));
+document.getElementById('year').textContent=new Date().getFullYear();
+document.getElementById('contactForm').addEventListener('submit',async(event)=>{event.preventDefault();const form=event.currentTarget;const data=new FormData(form);const content=`Contato pelo portfólio de Matheus\n\nNome: ${data.get('name')}\nE-mail: ${data.get('email')}\n\nMensagem:\n${data.get('message')}`;const feedback=document.getElementById('formFeedback');try{await navigator.clipboard.writeText(content);feedback.textContent='✓ Mensagem copiada! Cole em um e-mail ou conversa para enviá-la.';}catch(e){const el=document.createElement('textarea');el.value=content;el.style.width='100%';el.rows=8;el.readOnly=true;feedback.replaceChildren(document.createTextNode('Copie o texto abaixo para enviar: '),el);el.select();}});

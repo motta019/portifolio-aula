@@ -1,0 +1,7 @@
+Leia primeiro AGENTS.md, referencias.md, identidade.md e funcionalidades.md, nesta ordem. Depois inspecione index.html, style.css e script.js. Este projeto JÁ TEM uma primeira versão: preserve o trabalho existente e não recrie tudo do zero.
+
+Sou Matheus Motta Nallin, aluno do 3º ano do Ensino Médio e técnico em Informática. Quero um portfólio autoral em HTML, CSS e JavaScript puro, com fundo grafite, detalhes verde-lima, títulos Space Grotesk, rótulos DM Mono e linguagem jovem e natural. Os projetos são acadêmicos, então não invente experiências, links, clientes nem resultados.
+
+NESTA PRIMEIRA ETAPA, faça SOMENTE a auditoria e o aprimoramento do HERO (topo): destaque o nome/assinatura visual, a frase “Ideias em código”, um resumo curto e um botão “Ver projetos”. Use as referências para orientar tipografia, espaçamento, contraste e microinterações discretas. Confira se funciona em telas de 375px e desktop e respeita movimento reduzido. Não altere Sobre mim, Projetos ou Contato nesta etapa.
+
+Ao terminar, informe os arquivos modificados, explique em até 3 linhas as decisões de design e diga como testar no navegador. Espere meu próximo comando antes de implementar outra funcionalidade.
